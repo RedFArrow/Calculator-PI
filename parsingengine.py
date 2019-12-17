@@ -1,22 +1,6 @@
-numbers = ['1','2','3','4','5','6','7','8','9','0','.']
+
 import sliceprocessor
-
-def sepbyint(strlist):
-    seperators = {}
-    operator = '0'
-    for i in range(len(strlist)):
-        num = False
-        for x in numbers:
-            if strlist[i] == x:
-                num = True
-        if num == False:
-            operator = strlist[i]
-            defin = i
-    firstnum  = join(strlist[0:defin])
-    secondnum = join(strlist[defin:len(strlist)])
-
-    ##okay so now i need to combine all the first numbers into one value, all the second numbers into another value. easy right?
-    return('hi')
+import acc
 
 def pairbrackets(f,s):
     brackets = {}
@@ -24,7 +8,7 @@ def pairbrackets(f,s):
         brackets[f[i]] = s[i]
     return brackets
 
-def bracketparcing(string):
+def bracketparcing(string): ##---------------------------- TO DO: INTERNAL BRACKETTING. ((37485+2734)-(273)) * 2 <--- THIS BREAKS IT.
     firstbrackets = []
     secondbrackets = []
     for i in range(0,(len(string))):
@@ -52,11 +36,16 @@ def space_removal(strlist):
         del strlist[i]
     return(strlist)
 
+def calculate(dict):
+    for i in dict:
+        print(acc.calculate(dict[i]))
+        
+
 def parsingengine(string):
     string = list(string) #Converts the input to a list
     string = space_removal(string) #removes any spaces from the list
     ##----------------#before this next part, it program needs to automatically add brackets in the correct locations.
     s1,s2 = bracketparcing(string) #Finds brackets in string
     bracketstring = sliceprocessor.mainpro(s1,s2) #Returns the bracketed sections in seperate dictionary values. [In]
-    pprint(bracketstring)
+    calculate(bracketstring)
     return('end')
