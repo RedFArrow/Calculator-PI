@@ -41,7 +41,7 @@ def calculate(dict):
     ans = []
     for i in dict:
         ans.append(acc.calculate(dict[i]))
-    print(ans)
+    return(ans)
 
 def parsingengine(string):
     string = list(string) #Converts the input to a list
@@ -50,5 +50,5 @@ def parsingengine(string):
     s1,s2 = bracketparcing(string) #Finds brackets in string
     bracketstring,operators = sliceprocessor.mainpro(s1,s2) #Returns the bracketed sections in seperate dictionary values. [In]
     ans = calculate(bracketstring)
-    answer = crossback_acc.main(ans,operators)
-    return('end')
+    answer = crossbrack_acc.main(ans,operators)
+    return(answer)
