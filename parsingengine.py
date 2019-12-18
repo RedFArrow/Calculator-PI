@@ -1,6 +1,7 @@
 
 import sliceprocessor
 import acc
+import crossbrack_acc
 
 def pairbrackets(f,s):
     brackets = {}
@@ -37,15 +38,17 @@ def space_removal(strlist):
     return(strlist)
 
 def calculate(dict):
+    ans = []
     for i in dict:
-        print(acc.calculate(dict[i]))
-        
+        ans.append(acc.calculate(dict[i]))
+    print(ans)
 
 def parsingengine(string):
     string = list(string) #Converts the input to a list
     string = space_removal(string) #removes any spaces from the list
     ##----------------#before this next part, it program needs to automatically add brackets in the correct locations.
     s1,s2 = bracketparcing(string) #Finds brackets in string
-    bracketstring = sliceprocessor.mainpro(s1,s2) #Returns the bracketed sections in seperate dictionary values. [In]
-    calculate(bracketstring)
+    bracketstring,operators = sliceprocessor.mainpro(s1,s2) #Returns the bracketed sections in seperate dictionary values. [In]
+    ans = calculate(bracketstring)
+    answer = crossback_acc.main(ans,operators)
     return('end')
