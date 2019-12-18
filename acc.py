@@ -22,7 +22,6 @@ def contpower(list): #Checks if there are powers. If so, works them out.
         return(returnval)
 
 def findparts(strlist): # Seperates a very simple formula into three parts, first number, second number and operator.
-    seperators = {}
     operator = '0'
     for i in range(len(strlist)):
         num = False
