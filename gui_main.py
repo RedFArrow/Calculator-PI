@@ -1,7 +1,7 @@
 import tkinter
 import gui_help
 import parsingengine
-##https://www.python-course.eu/tkinter_dialogs.php
+##--> https://www.python-course.eu/tkinter_dialogs.php  / Perhaps add dialogues to check if copy is required before closing?
 
 global result
 result = ' '

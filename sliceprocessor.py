@@ -1,7 +1,9 @@
 def mainpro(brackets,l):
+    #Init variables
     x = {}
     y = 0
     z = {}
+    
     for i in brackets:
         first = ((int(i))+1)
         second = int(brackets[i])
