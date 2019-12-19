@@ -18,7 +18,7 @@ def bracketparcing(string): ##---------------------------- TO DO: INTERNAL BRACK
         elif string[i] == ')':
             secondbrackets.append(i)
     if len(firstbrackets) != len(secondbrackets):
-        print('SYNTAX ERROR. MISSING BRACKETS.')
+        brackets = 'SYNTAX ERROR'
     else:
         brackets = pairbrackets(firstbrackets,secondbrackets)
     #okay so at this point, we have a dictionary which gives the location of all the brackets. Now we just need to seperate those brackets, while still keeping the seperate operators.

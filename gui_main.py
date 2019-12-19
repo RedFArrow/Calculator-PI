@@ -7,7 +7,6 @@ def function():
     global entry1
     string = entry1.get()
     result = (parsingengine.parsingengine(string))
-    print(result)
     Text.configure(state="normal")
     Text.delete(1.0,tkinter.END)
     Text.insert(1.0,result)
@@ -31,7 +30,9 @@ button = tkinter.Button(frame,text="HELP",fg="red",command=helpmenu)
 button.pack(side=tkinter.BOTTOM)
 
 
-Text = tkinter.Text(root,height=5, width = 30)
+Text = tkinter.Text(root,height=1, width = 30
+                    
+                    )
 
 Text.pack()
 Text.insert(tkinter.END,'')
